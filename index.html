@@ -1,0 +1,1334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Pottstown Medical Specialists, Inc. (PMSI) - Comprehensive Healthcare For Life</title>
+<meta name="description" content="Physician-owned multispecialty practice in Berks and Montgomery Counties, PA. Twelve offices, one shared medical record, every specialty for the families we serve." />
+<meta name="theme-color" content="#0f2b66" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3" />
+<link rel="alternate icon" type="image/png" href="favicon.svg?v=3" />
+<link rel="shortcut icon" href="favicon.svg?v=3" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3" />
+<link rel="preload" as="video" href="assets/hero-bg.mp4" type="video/mp4" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream:   { 50:'#f0f5fb', 100:'#e6eef8', 200:'#d4e1f1' },
+        navy:    { 50:'#e8eef7', 100:'#c5d3ec', 200:'#9ab2d8', 300:'#6f91c3', 400:'#3e62a3', 500:'#274b8c', 600:'#173f7c', 700:'#0f2b66', 800:'#0a2052', 900:'#06163d' },
+        ink:     { 900:'#0e1a36', 700:'#1f2d4d', 500:'#3a4666' },
+      },
+      fontFamily: {
+        display: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        serif:   ['"Instrument Serif"', 'ui-serif', 'Georgia', 'serif'],
+        body:    ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+
+<style>
+  :root{
+    --cream-50:#f0f5fb; --cream-100:#e6eef8;
+    --navy-500:#274b8c; --navy-600:#173f7c; --navy-700:#0f2b66; --navy-800:#0a2052; --navy-900:#06163d;
+    --ink-900:#0e1a36; --ink-700:#1f2d4d;
+  }
+  html{ scroll-behavior:smooth; -webkit-font-smoothing:antialiased; }
+  body{
+    font-family:'Manrope',ui-sans-serif,system-ui,sans-serif;
+    color:#333a4f;
+    background:var(--cream-50);
+    line-height:1.5;
+  }
+  .font-serif{ font-family:'Instrument Serif', ui-serif, Georgia, serif; }
+  .display{
+    font-family:'Manrope',sans-serif; font-weight:800; letter-spacing:-0.045em; line-height:1;
+  }
+  .display-md{ font-family:'Manrope',sans-serif; font-weight:800; letter-spacing:-0.035em; line-height:1; }
+  .eyebrow{
+    font-family:'Instrument Serif', serif; font-style: italic; font-weight:400;
+    font-size:22px; color: var(--navy-700);
+  }
+
+  /* Hero */
+  .hero-wrap{ position:relative; overflow:hidden; }
+  .hero-vid{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .hero-tint{
+    position:absolute; inset:0;
+    background:
+      linear-gradient(180deg, rgba(6,22,61,.62) 0%, rgba(6,22,61,.45) 35%, rgba(6,22,61,.72) 100%),
+      radial-gradient(60% 50% at 50% 50%, rgba(0,0,0,.35), transparent 70%);
+  }
+
+  /* Pill button */
+  .pill{
+    display:inline-flex; align-items:center; gap:.55rem;
+    padding:.85rem 1.4rem; border-radius:999px; font-weight:600; font-size:14px;
+    transition: transform .35s cubic-bezier(.2,.8,.2,1), background-color .35s ease, color .35s ease, box-shadow .35s ease;
+  }
+  .pill:focus-visible{ outline:2px solid #fff; outline-offset:3px; }
+  .pill:active{ transform: translateY(1px); }
+  .pill-primary{
+    background: var(--navy-600); color:#fff;
+    box-shadow: 0 14px 30px -14px rgba(15,43,102,.55);
+  }
+  .pill-primary:hover{ background: var(--navy-700); transform: translateY(-2px); }
+  .pill-ghost-light{
+    background: transparent; color:#fff; border:1px solid rgba(255,255,255,.35);
+  }
+  .pill-ghost-light:hover{ background: rgba(255,255,255,.12); transform: translateY(-2px); }
+  .pill-light{
+    background:#fff; color: var(--navy-700);
+    box-shadow: 0 14px 30px -14px rgba(15,43,102,.25);
+  }
+  .pill-light:hover{ background: var(--cream-100); transform: translateY(-2px); }
+  .pill-dot{ width:8px; height:8px; border-radius:999px; background:#fff; opacity:.95; }
+
+  /* Color-scaled stacked value lines (Nosu style) */
+  .vline{
+    font-family:'Manrope',sans-serif; font-weight:800; letter-spacing:-0.028em; line-height:1;
+    font-size: 40px;
+  }
+  @media (min-width: 1024px){ .vline{ font-size: 44px; } }
+
+  /* Tilted pill cards (trust stack) */
+  .trust-pill{
+    display:flex; align-items:center; gap:14px;
+    padding: 18px 26px; border-radius: 999px; color:#fff;
+    box-shadow: 0 24px 50px -28px rgba(15,43,102,.45), 0 1px 0 rgba(255,255,255,.18) inset;
+    font-weight:700; letter-spacing:-0.01em;
+  }
+  .trust-pill .ti{
+    width: 30px; height: 30px; border-radius:999px; background: rgba(255,255,255,.25);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+
+  /* Card */
+  .soft-card{
+    background:#fff; border-radius: 28px;
+    box-shadow: 0 30px 60px -36px rgba(15,43,102,.18), 0 1px 0 rgba(255,255,255,.5) inset;
+  }
+
+  /* Section bg variants */
+  .bg-mint{ background: var(--cream-50); }
+  .bg-mint-100{ background: var(--cream-100); }
+
+  /* Accordion */
+  details.acc{ border-bottom: 1px solid rgba(15,43,102,.10); }
+  details.acc summary{
+    list-style:none; cursor:pointer;
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 22px 4px; font-weight: 700; color: var(--navy-700);
+    font-size: 18px; letter-spacing:-0.01em;
+  }
+  details.acc summary::-webkit-details-marker{ display:none; }
+  details.acc .plus{
+    width:32px; height:32px; border-radius:999px; border:1px solid rgba(15,43,102,.18);
+    display:flex; align-items:center; justify-content:center; color: var(--navy-700);
+    transition: transform .35s ease, background-color .35s ease;
+  }
+  details.acc[open] .plus{ transform: rotate(45deg); background: var(--navy-700); color:#fff; border-color: var(--navy-700); }
+  details.acc .body{ padding: 4px 4px 22px; color:#4a5571; max-width: 680px; }
+
+  /* Big rounded image cards in promise grid */
+  .pcard{
+    position:relative; overflow:hidden; border-radius: 28px; min-height: 380px;
+    color:#fff; display:flex; align-items:flex-end; padding: 26px;
+  }
+  .pcard .pcard-img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+    transform: scale(1.02); transition: transform .8s cubic-bezier(.2,.8,.2,1);
+  }
+  .pcard:hover .pcard-img{ transform: scale(1.06); }
+  .pcard .pcard-tint{
+    position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(6,22,61,.05) 0%, rgba(6,22,61,.78) 100%);
+  }
+  .pcard .pcard-tag{
+    position:absolute; top:18px; left:18px; right:18px;
+    display:flex; align-items:center; justify-content:space-between;
+    color:#fff;
+  }
+  .pcard .pcard-title{
+    position:relative; font-family:'Manrope',sans-serif; font-weight:800;
+    letter-spacing:-0.025em; font-size: 28px; line-height: 1.05;
+  }
+
+  /* Big italic serif markers */
+  .super-serif{ font-family:'Instrument Serif',serif; font-style: italic; font-weight: 400; }
+
+  /* Marquee */
+  .marquee{
+    display:flex; gap:3rem; width:max-content;
+    animation: marquee 40s linear infinite;
+  }
+  @keyframes marquee{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+  /* Reveal */
+  .reveal{ opacity:0; transform: translateY(16px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+  .reveal.in{ opacity:1; transform:none; }
+  .reveal-1{ transition-delay:.06s; } .reveal-2{ transition-delay:.14s; }
+  .reveal-3{ transition-delay:.22s; } .reveal-4{ transition-delay:.30s; }
+  .reveal-5{ transition-delay:.38s; }
+
+  /* Inputs (dark CTA section) */
+  .field{
+    width:100%; background: rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.20); color:#fff;
+    padding: 14px 18px; border-radius: 999px; font-size: 14px;
+    transition: border-color .35s ease, background-color .35s ease;
+  }
+  .field::placeholder{ color: rgba(255,255,255,.65); }
+  .field:focus{ outline:none; border-color:#fff; background: rgba(255,255,255,.16); }
+
+  /* Footer rounded shell (Nosu style) */
+  .footer-shell{
+    background: linear-gradient(180deg, #c5d3ec 0%, #3e62a3 65%, #173f7c 100%);
+    border-radius: 28px; color:#fff;
+    overflow: hidden; position: relative;
+  }
+
+  ::selection{ background: var(--navy-600); color:#fff; }
+
+  /* Decorative leaf-like blur blobs */
+  .leaf{
+    position:absolute; pointer-events:none; opacity:.7;
+    filter: blur(0.5px);
+  }
+
+  /* Mobile nav */
+  .mobile-nav{ transform: translateY(-110%); transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+  .mobile-nav.open{ transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce){
+    .marquee{ animation:none; }
+    .reveal{ opacity:1; transform:none; transition:none; }
+    .hero-vid{ display:none; }
+  }
+
+  /* ============ INTERACTIVITY LAYER ============ */
+  /* Scroll progress bar */
+  .scroll-bar{
+    position:fixed; top:0; left:0; height:3px; width:0%;
+    background: linear-gradient(90deg, #6f91c3, #173f7c);
+    z-index: 100; transition: width .12s linear;
+    box-shadow: 0 0 12px rgba(15,43,102,.4);
+  }
+
+  /* Custom cursor */
+  body.has-cursor{ cursor: none; }
+  body.has-cursor a, body.has-cursor button, body.has-cursor input, body.has-cursor select, body.has-cursor textarea, body.has-cursor [role=button]{ cursor:none; }
+  .cursor{
+    position: fixed; left:0; top:0; width:14px; height:14px; border-radius:999px;
+    background: #0f2b66; pointer-events:none; z-index:200;
+    transform: translate(-50%, -50%);
+    transition: transform .15s ease, width .25s ease, height .25s ease, background-color .25s ease;
+    mix-blend-mode: difference;
+  }
+  .cursor.is-hover{ width: 44px; height: 44px; background:#ffffff; }
+  .cursor-trail{
+    position: fixed; left:0; top:0; width:36px; height:36px; border-radius:999px;
+    border: 1px solid rgba(15,43,102,.5);
+    pointer-events:none; z-index:199;
+    transform: translate(-50%, -50%);
+    transition: transform .35s cubic-bezier(.2,.8,.2,1);
+  }
+
+  /* Spotlight follow on hero */
+  .hero-spot{
+    position:absolute; inset:0; pointer-events:none; mix-blend-mode: screen;
+    background: radial-gradient(240px 240px at var(--mx, 50%) var(--my, 50%), rgba(110,145,195,.55), transparent 70%);
+    opacity: 0; transition: opacity .35s ease;
+  }
+  .hero-wrap:hover .hero-spot{ opacity: 1; }
+
+  /* Magnetic / lift button */
+  .pill{ will-change: transform; }
+
+  /* Card tilt — JS sets --rx and --ry */
+  .tilt{ transition: transform .25s cubic-bezier(.2,.8,.2,1); transform-style: preserve-3d; }
+  .tilt:hover{ transform: perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateZ(0); }
+  .tilt > *{ transform: translateZ(0); }
+
+  /* Value line hover sweep */
+  .vline{ position: relative; cursor:default; transition: transform .35s ease, color .35s ease; }
+  .vline:hover{ transform: translateX(8px); color:#0f2b66 !important; }
+  .vline::before{
+    content:''; position: absolute; left:-14px; top:50%; width:6px; height:6px; border-radius:999px;
+    background: currentColor; transform: translateY(-50%) scale(0);
+    transition: transform .35s cubic-bezier(.2,.8,.2,1);
+  }
+  .vline:hover::before{ transform: translateY(-50%) scale(1); }
+
+  /* Trust pill hover */
+  .trust-pill{ transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease; }
+  .trust-pill:hover{ transform: translateX(8px) rotate(0deg) !important; box-shadow: 0 30px 60px -28px rgba(15,43,102,.6); }
+
+  /* Soft card hover */
+  .soft-card{ transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease; will-change: transform; }
+  .soft-card:hover{ transform: translateY(-4px); box-shadow: 0 40px 80px -30px rgba(15,43,102,.25); }
+
+  /* Pcard scale image on hover already; add overlay shift */
+  .pcard{ transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+  .pcard:hover{ transform: translateY(-3px); }
+
+  /* Counter sequence */
+  .counter{ font-variant-numeric: tabular-nums; }
+
+  /* Animated underline links in nav */
+  header nav a{ position: relative; }
+  header nav a::after{
+    content:''; position:absolute; left:0; right:0; bottom:-6px; height:1px;
+    background: currentColor; transform: scaleX(0); transform-origin: right;
+    transition: transform .35s cubic-bezier(.2,.8,.2,1);
+  }
+  header nav a:hover::after{ transform: scaleX(1); transform-origin: left; }
+
+  /* Floating decorative blobs that move with mouse */
+  .blob{ position: absolute; border-radius:999px; filter: blur(60px); opacity: .55; pointer-events:none; transition: transform .4s cubic-bezier(.2,.8,.2,1); }
+
+  /* Stat card reveal */
+  .stat-card{
+    background: #fff; border-radius: 28px; padding: 28px;
+    box-shadow: 0 30px 60px -36px rgba(15,43,102,.18);
+    transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
+  }
+  .stat-card:hover{ transform: translateY(-6px); }
+
+  /* Marquee already exists */
+  .ticker{
+    display:flex; gap: 2.5rem; width: max-content;
+    animation: marquee 55s linear infinite;
+  }
+  .ticker-track:hover .ticker{ animation-play-state: paused; }
+
+  /* Pill button shine */
+  .pill::after{
+    content:''; position:absolute; inset:0; border-radius:999px; pointer-events:none;
+    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.45) 50%, transparent 100%);
+    transform: translateX(-120%); transition: transform .7s cubic-bezier(.2,.8,.2,1);
+  }
+  .pill{ position: relative; overflow: hidden; }
+  .pill:hover::after{ transform: translateX(120%); }
+
+  /* Scroll-snap accordions */
+  details.acc summary{ transition: color .25s ease, padding-left .25s ease; }
+  details.acc summary:hover{ color: #0f2b66; padding-left: 6px; }
+  details.acc[open] summary{ color:#0f2b66; }
+
+  /* Reveal slide variants */
+  .reveal-l{ opacity:0; transform: translateX(-24px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+  .reveal-l.in{ opacity:1; transform: none; }
+  .reveal-r{ opacity:0; transform: translateX(24px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+  .reveal-r.in{ opacity:1; transform: none; }
+  .reveal-up{ opacity:0; transform: translateY(40px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1); }
+  .reveal-up.in{ opacity:1; transform: none; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Scroll progress -->
+<div class="scroll-bar" id="scrollBar"></div>
+<!-- Custom cursor (desktop only) -->
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-trail" id="cursorTrail" aria-hidden="true"></div>
+
+<!-- HEADER -->
+<header class="absolute top-0 inset-x-0 z-50">
+  <div class="mx-auto max-w-[1320px] px-5 lg:px-8 pt-6">
+    <div class="flex items-center justify-between rounded-full bg-white/12 backdrop-blur-md border border-white/25 pl-2 pr-3 py-2 text-white">
+      <a href="#top" class="flex items-center gap-3" aria-label="Pottstown Medical Specialists">
+        <span class="inline-flex items-center justify-center bg-white rounded-full px-6 py-3 shadow-[0_18px_40px_-20px_rgba(15,43,102,.45)]">
+          <img src="assets/pmsi-logo.png" alt="Pottstown Medical Specialists" class="h-16 lg:h-20 w-auto"/>
+        </span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-8 text-[14px] font-medium">
+        <a href="#about" class="opacity-90 hover:opacity-100">About</a>
+        <a href="#specialties" class="opacity-90 hover:opacity-100">Specialties</a>
+        <a href="#locations" class="opacity-90 hover:opacity-100">Locations</a>
+        <a href="#providers" class="opacity-90 hover:opacity-100">Providers</a>
+        <a href="#research" class="opacity-90 hover:opacity-100">Research</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="tel:6103274200" class="hidden md:inline-flex pill pill-ghost-light text-[13px]"><span class="pill-dot"></span> (610) 327-4200</a>
+        <a href="#contact" class="pill pill-light text-[13px]">Find a provider</a>
+        <button id="navToggle" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/25" aria-label="Toggle menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobileNav" class="mobile-nav lg:hidden absolute top-full inset-x-0 mx-auto max-w-[1320px] px-5">
+    <div class="mt-2 rounded-3xl bg-white border border-navy-700/10 shadow-xl p-2">
+      <a href="#about" class="block px-5 py-3 text-navy-700 rounded-2xl hover:bg-cream-50">About</a>
+      <a href="#specialties" class="block px-5 py-3 text-navy-700 rounded-2xl hover:bg-cream-50">Specialties</a>
+      <a href="#locations" class="block px-5 py-3 text-navy-700 rounded-2xl hover:bg-cream-50">Locations</a>
+      <a href="#providers" class="block px-5 py-3 text-navy-700 rounded-2xl hover:bg-cream-50">Providers</a>
+      <a href="#research" class="block px-5 py-3 text-navy-700 rounded-2xl hover:bg-cream-50">Research</a>
+      <a href="#contact" class="block px-5 py-3 text-navy-700 rounded-2xl hover:bg-cream-50">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="hero-wrap text-white" style="min-height: 100vh;">
+  <div class="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-700 to-navy-500"></div>
+  <video class="hero-vid" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+    <source src="assets/hero-bg.mp4" type="video/mp4"/>
+  </video>
+  <div class="hero-tint"></div>
+  <div class="hero-spot" id="heroSpot"></div>
+
+  <div class="relative mx-auto max-w-[1320px] px-5 lg:px-8 min-h-screen flex flex-col">
+    <div class="flex-1 flex items-center pt-32 pb-24">
+      <div class="w-full text-center">
+        <p class="reveal font-serif italic text-cream-100/90 text-[22px] md:text-[26px]">Comprehensive healthcare</p>
+        <h1 class="reveal reveal-1 mt-2 display text-[72px] md:text-[120px] lg:text-[156px]">
+          For life.
+        </h1>
+        <p class="reveal reveal-2 mt-7 max-w-2xl mx-auto text-[16px] md:text-[18px] text-white/85">
+          A physician-owned practice that has cared for families in Berks and Montgomery Counties since 1978. Twelve offices, the specialists most people drive an hour to see, and a medical record that follows you wherever you go in PMSI.
+        </p>
+        <div class="reveal reveal-3 mt-9 flex flex-wrap items-center justify-center gap-3">
+          <a href="#providers" class="pill pill-light"><span class="pill-dot" style="background:#0f2b66"></span> Find a provider</a>
+          <a href="#locations" class="pill pill-ghost-light">See our locations</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust marquee -->
+<section class="relative bg-navy-900 text-white border-y border-white/10 overflow-hidden">
+  <div class="ticker-track py-6 overflow-hidden">
+    <div class="ticker text-cream-100/80 text-[14px] uppercase tracking-[.22em] whitespace-nowrap font-display">
+      <div class="flex items-center gap-10">
+        <span>Family Medicine</span><span class="opacity-40">·</span>
+        <span>Internal Medicine</span><span class="opacity-40">·</span>
+        <span>Neurology</span><span class="opacity-40">·</span>
+        <span>Pulmonary &amp; Sleep</span><span class="opacity-40">·</span>
+        <span>Rheumatology &amp; Infusion</span><span class="opacity-40">·</span>
+        <span>Interventional Pain</span><span class="opacity-40">·</span>
+        <span>Sports Medicine</span><span class="opacity-40">·</span>
+        <span>Diabetes Education</span><span class="opacity-40">·</span>
+        <span>Clinical Research</span><span class="opacity-40">·</span>
+      </div>
+      <div class="flex items-center gap-10">
+        <span>Family Medicine</span><span class="opacity-40">·</span>
+        <span>Internal Medicine</span><span class="opacity-40">·</span>
+        <span>Neurology</span><span class="opacity-40">·</span>
+        <span>Pulmonary &amp; Sleep</span><span class="opacity-40">·</span>
+        <span>Rheumatology &amp; Infusion</span><span class="opacity-40">·</span>
+        <span>Interventional Pain</span><span class="opacity-40">·</span>
+        <span>Sports Medicine</span><span class="opacity-40">·</span>
+        <span>Diabetes Education</span><span class="opacity-40">·</span>
+        <span>Clinical Research</span><span class="opacity-40">·</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Animated stat counter band -->
+<section class="relative bg-mint pt-20 lg:pt-28 pb-4">
+  <div class="mx-auto max-w-[1320px] px-5 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+      <div class="stat-card reveal-up">
+        <div class="font-display display-md counter text-navy-700 text-[56px]" data-target="47">0</div>
+        <p class="mt-3 text-[12px] uppercase tracking-[.18em] text-ink-700/60 font-semibold">Years of practice</p>
+      </div>
+      <div class="stat-card reveal-up reveal-1">
+        <div class="font-display display-md counter text-navy-700 text-[56px]" data-target="12">0</div>
+        <p class="mt-3 text-[12px] uppercase tracking-[.18em] text-ink-700/60 font-semibold">Community offices</p>
+      </div>
+      <div class="stat-card reveal-up reveal-2">
+        <div class="font-display display-md counter text-navy-700 text-[56px]" data-target="9">0</div>
+        <p class="mt-3 text-[12px] uppercase tracking-[.18em] text-ink-700/60 font-semibold">Specialty divisions</p>
+      </div>
+      <div class="stat-card reveal-up reveal-3">
+        <div class="font-display display-md text-navy-700 text-[56px]"><span class="counter" data-target="36">0</span><span class="text-navy-400">+</span></div>
+        <p class="mt-3 text-[12px] uppercase tracking-[.18em] text-ink-700/60 font-semibold">Clinicians on staff</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1: HEADLINE + COLOR-SCALED VALUE LINES -->
+<section id="about" class="relative bg-mint py-24 lg:py-36">
+  <div class="mx-auto max-w-[1320px] px-5 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+      <div class="lg:col-span-5">
+        <h2 class="reveal display text-[42px] md:text-[56px] lg:text-[64px] text-navy-700">
+          PMSI is your <br/>community for <br/><span class="super-serif text-navy-500" style="font-weight:400; letter-spacing:0; line-height:1.05;">comprehensive care.</span>
+        </h2>
+        <p class="reveal reveal-1 mt-8 text-[15px] text-ink-700/80 max-w-md leading-[1.7]">
+          PMSI began in 1978 when three local internal medicine offices merged. Today the practice includes family doctors, internists and nine specialty divisions. Same medical record across all of them. Same team taking care of your kids, your parents and, eventually, you.
+        </p>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="reveal soft-card p-8 lg:p-12">
+          <div class="space-y-3">
+            <div class="vline" style="color:#9ab2d8;">Primary care for every age</div>
+            <div class="vline" style="color:#6f91c3;">Specialists you can actually see</div>
+            <div class="vline" style="color:#3e62a3;">One record across every office</div>
+            <div class="vline" style="color:#274b8c;">Same-week appointments</div>
+            <div class="vline" style="color:#0f2b66;">A practice that stays with you</div>
+          </div>
+          <div class="mt-10">
+            <a href="#providers" class="pill pill-primary"><span class="pill-dot"></span> Find a provider</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tilted trust pill stack -->
+    <div class="reveal mt-24 lg:mt-32 grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-6 relative" style="min-height: 480px;">
+        <svg class="leaf" style="top:-20px; left:-20px; width:140px;" viewBox="0 0 200 200" fill="none"><path d="M40 160 C 30 110, 70 50, 160 40 C 150 130, 90 170, 40 160 Z" fill="#9ab2d8" opacity=".25"/></svg>
+        <svg class="leaf" style="bottom:0; right:0; width:120px;" viewBox="0 0 200 200" fill="none"><path d="M40 160 C 30 110, 70 50, 160 40 C 150 130, 90 170, 40 160 Z" fill="#6f91c3" opacity=".3"/></svg>
+
+        <div class="trust-pill" style="background:#c5d3ec; color:#0f2b66; transform: rotate(-3deg); position:relative; z-index:2; max-width: 480px;">
+          <div class="ti" style="background: rgba(15,43,102,.10);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          Physician-owned since 1978
+        </div>
+        <div class="trust-pill mt-4" style="background:#9ab2d8; color:#fff; transform: rotate(2deg); margin-left: 30px; max-width: 480px;">
+          <div class="ti">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          ADCES-accredited diabetes program
+        </div>
+        <div class="trust-pill mt-4" style="background:#6f91c3; color:#fff; transform: rotate(-2deg); margin-left: 10px; max-width: 480px;">
+          <div class="ti">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          Accredited diagnostic sleep center
+        </div>
+        <div class="trust-pill mt-4" style="background:#3e62a3; color:#fff; transform: rotate(3deg); margin-left: 50px; max-width: 480px;">
+          <div class="ti">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          On-site infusion &amp; imaging
+        </div>
+        <div class="trust-pill mt-4" style="background:#274b8c; color:#fff; transform: rotate(-2deg); margin-left: 20px; max-width: 480px;">
+          <div class="ti">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          Clinical research at the local level
+        </div>
+        <div class="trust-pill mt-4" style="background:#0f2b66; color:#fff; transform: rotate(2deg); margin-left: 40px; max-width: 480px;">
+          <div class="ti">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          Trusted by families in Berks &amp; Montgomery
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 relative">
+        <div class="rounded-[28px] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80" alt="A family with their PMSI care team" class="w-full h-[480px] object-cover"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: "The PMSI Standard" — italic serif kicker + dark/light split -->
+<section id="specialties" class="relative bg-mint-100 py-24 lg:py-36">
+  <div class="mx-auto max-w-[1320px] px-5 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <p class="reveal font-serif italic text-navy-700 text-[24px] md:text-[28px]">The PMSI Standard</p>
+      <h2 class="reveal reveal-1 mt-3 display text-[44px] md:text-[64px] lg:text-[76px] text-navy-700">
+        Healthcare that <span class="super-serif text-navy-500" style="font-weight:400; letter-spacing:0;">stays with you.</span>
+      </h2>
+    </div>
+
+    <div class="reveal mt-16 grid lg:grid-cols-2 gap-6">
+
+      <!-- The Problem -->
+      <article class="rounded-[28px] p-8 lg:p-12 text-white" style="background: linear-gradient(155deg, #173f7c 0%, #06163d 100%);">
+        <p class="font-serif italic text-cream-100/85 text-[18px]">What patients tell us</p>
+        <h3 class="display-md mt-2 text-[40px] md:text-[48px]">The Problem</h3>
+        <p class="mt-6 text-[15px] leading-[1.75] text-white/85">
+          Your primary care office is here. Your rheumatologist is forty minutes away in King of Prussia. The pulmonologist is at a hospital network that uses a different chart. Nobody talks to anybody else, and you become the person carrying the printouts.
+        </p>
+        <p class="mt-4 text-[15px] leading-[1.75] text-white/85">
+          It is tiring. Most people stop scheduling the appointments they need.
+        </p>
+        <p class="mt-8 font-serif italic text-cream-100 text-[16px]">A system patients have to fight against.</p>
+      </article>
+
+      <!-- The Solution -->
+      <article class="rounded-[28px] p-8 lg:p-12 text-white" style="background: linear-gradient(155deg, #3e62a3 0%, #173f7c 100%);">
+        <p class="font-serif italic text-cream-100/85 text-[18px]">How we work</p>
+        <h3 class="display-md mt-2 text-[40px] md:text-[48px]">The PMSI Way</h3>
+        <p class="mt-6 text-[15px] leading-[1.75] text-white/85">
+          Same group, same chart. Your family doctor at Brookside can read the note your PMSI neurologist wrote last Tuesday. The referral does not get faxed, lost or repeated. You drive twelve minutes instead of an hour.
+        </p>
+        <p class="mt-4 text-[15px] leading-[1.75] text-white/85">
+          That is the practical version of "coordinated care."
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#locations" class="pill pill-light text-[13px]">See where we are</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: SPECIALTIES TILES -->
+<section class="relative bg-mint py-24 lg:py-36">
+  <div class="mx-auto max-w-[1320px] px-5 lg:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+      <div class="max-w-2xl">
+        <p class="reveal font-serif italic text-navy-700 text-[22px]">What we treat</p>
+        <h2 class="reveal reveal-1 mt-2 display text-[40px] md:text-[56px] text-navy-700">
+          Every specialty <span class="super-serif text-navy-500" style="font-weight:400;">under one roof.</span>
+        </h2>
+      </div>
+      <p class="reveal reveal-2 max-w-md text-[15px] text-ink-700/75">
+        Primary care for adults and kids, plus the specialists most families end up driving across the state for. All in Pottstown.
+      </p>
+    </div>
+
+    <div class="reveal mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="soft-card p-7">
+        <div class="w-11 h-11 rounded-full bg-navy-50 flex items-center justify-center text-navy-700">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3 class="mt-5 font-display font-extrabold text-[22px] text-navy-700 tracking-tight">Family Medicine</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">Five offices doing primary care for every age, from well-baby visits through Medicare.</p>
+      </div>
+      <div class="soft-card p-7">
+        <div class="w-11 h-11 rounded-full bg-navy-50 flex items-center justify-center text-navy-700">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v6m0 0a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 14v6"/></svg>
+        </div>
+        <h3 class="mt-5 font-display font-extrabold text-[22px] text-navy-700 tracking-tight">Internal Medicine</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">Adult primary care, with a focus on chronic disease management and prevention.</p>
+      </div>
+      <div class="soft-card p-7">
+        <div class="w-11 h-11 rounded-full bg-navy-50 flex items-center justify-center text-navy-700">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3 class="mt-5 font-display font-extrabold text-[22px] text-navy-700 tracking-tight">Neurology</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">Headache, seizure, neuropathy, stroke follow-up. On-site EMG testing.</p>
+      </div>
+      <div class="soft-card p-7">
+        <div class="w-11 h-11 rounded-full bg-navy-50 flex items-center justify-center text-navy-700">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6.5 12C5 8 6 4 9 3s5 2 5 6c0 6-3 11-3 11s-4-4-4-8z"/></svg>
+        </div>
+        <h3 class="mt-5 font-display font-extrabold text-[22px] text-navy-700 tracking-tight">Pulmonary &amp; Sleep</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">Asthma and COPD care, plus an accredited sleep lab for in-clinic studies.</p>
+      </div>
+      <div class="soft-card p-7">
+        <div class="w-11 h-11 rounded-full bg-navy-50 flex items-center justify-center text-navy-700">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 12l2 2 4-4M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20z"/></svg>
+        </div>
+        <h3 class="mt-5 font-display font-extrabold text-[22px] text-navy-700 tracking-tight">Rheumatology &amp; Infusion</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">Autoimmune care with our own infusion suite at 1566 Medical Drive. No outside referrals required for infusions.</p>
+      </div>
+      <div class="soft-card p-7">
+        <div class="w-11 h-11 rounded-full bg-navy-50 flex items-center justify-center text-navy-700">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </div>
+        <h3 class="mt-5 font-display font-extrabold text-[22px] text-navy-700 tracking-tight">Interventional Pain</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">Image-guided injections, stem cell therapy, and longer-term pain management plans.</p>
+      </div>
+      <div class="soft-card p-7">
+        <div class="w-11 h-11 rounded-full bg-navy-50 flex items-center justify-center text-navy-700">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M8 12l4-4 4 4-4 4z"/></svg>
+        </div>
+        <h3 class="mt-5 font-display font-extrabold text-[22px] text-navy-700 tracking-tight">Sports Medicine</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">Orthopedic urgent care and injury rehab. Used by local high school athletes and weekend warriors alike.</p>
+      </div>
+      <div class="soft-card p-7">
+        <div class="w-11 h-11 rounded-full bg-navy-50 flex items-center justify-center text-navy-700">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12h4l2-4 4 8 2-4h6"/></svg>
+        </div>
+        <h3 class="mt-5 font-display font-extrabold text-[22px] text-navy-700 tracking-tight">Diabetes Education</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">An ADCES-accredited program with classes on A1C, carb counting and meal planning. Available in person or by webcast.</p>
+      </div>
+      <div class="soft-card p-7">
+        <div class="w-11 h-11 rounded-full bg-navy-50 flex items-center justify-center text-navy-700">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 2v6l-6 8a4 4 0 0 0 3 6h12a4 4 0 0 0 3-6l-6-8V2"/></svg>
+        </div>
+        <h3 class="mt-5 font-display font-extrabold text-[22px] text-navy-700 tracking-tight">Clinical Research</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">Through Circuit Clinical, patients can join trials without leaving the office they already use.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: HEALTHCARE 101 STYLE EDITORIAL (mirrors "hidden cost") -->
+<section class="relative bg-mint-100 py-24 lg:py-36">
+  <div class="mx-auto max-w-[1320px] px-5 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-12 items-start">
+
+      <div class="lg:col-span-7">
+        <p class="reveal font-serif italic text-navy-700 text-[22px]">Healthcare 101</p>
+        <h2 class="reveal reveal-1 mt-2 display text-[44px] md:text-[60px] text-navy-700">
+          The real cost of <span class="super-serif text-navy-500" style="font-weight:400;">fragmented care.</span>
+        </h2>
+
+        <div class="mt-8 text-[15px] leading-[1.85] text-ink-700/85 max-w-2xl space-y-4">
+          <p>When your primary care doctor, your specialists and your pharmacy do not share a chart, the work of keeping everyone informed quietly becomes your job. You repeat your history at every visit. You carry the printouts. You try to remember what dose got changed last spring.</p>
+          <p>Care that is actually coordinated is not a perk. It is the practical reason a chronic condition gets caught at a well-visit instead of in an ER three years later. It is one of the few things in modern healthcare that genuinely makes a daily difference.</p>
+        </div>
+
+        <div class="mt-10 max-w-2xl">
+          <h3 class="font-display font-extrabold text-[22px] text-navy-700 tracking-tight mb-2">Common questions, answered</h3>
+
+          <details class="acc">
+            <summary>How do I become a patient at PMSI?
+              <span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+            </summary>
+            <div class="body">Call the office closest to you. Most of our family practice locations can fit new patients in within a week.</div>
+          </details>
+
+          <details class="acc">
+            <summary>What insurance do you accept?
+              <span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+            </summary>
+            <div class="body">We take most major plans, though coverage can differ from one specialty to another. The current list is on our patient resources page, and the front desk will check yours when you call.</div>
+          </details>
+
+          <details class="acc">
+            <summary>Can I see specialists without a referral?
+              <span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+            </summary>
+            <div class="body">A lot of our specialty divisions will book directly, but your insurance plan may still need a referral on file for it to be covered. If you are not sure, call us first and we will walk you through it.</div>
+          </details>
+
+          <details class="acc">
+            <summary>How do I access my records?
+              <span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+            </summary>
+            <div class="body">FollowMyHealth is our patient portal. You can pull up lab results, request refills, message the office, and look at your history without picking up the phone.</div>
+          </details>
+        </div>
+
+        <p class="mt-10 text-[12px] italic text-ink-700/55 max-w-xl">This page is for general information. It is not a substitute for medical advice from your own clinician.</p>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="relative rounded-[28px] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1200&q=80" alt="Clinician consulting with a patient" class="w-full h-[640px] object-cover"/>
+          <div class="absolute inset-0" style="background: linear-gradient(180deg, transparent 50%, rgba(6,22,61,.55) 100%);"></div>
+          <div class="absolute bottom-6 left-6 right-6 text-white">
+            <p class="font-serif italic text-[18px] opacity-90">Twelve offices. One chart that follows you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP (Nosu "It's time to take control") -->
+<section class="relative">
+  <div class="mx-auto max-w-[1320px] px-5 lg:px-8 py-8">
+    <div class="relative overflow-hidden rounded-[28px] text-white" style="background: linear-gradient(120deg, #173f7c 0%, #0a2052 100%);">
+      <div class="grid lg:grid-cols-2 gap-8 items-center p-8 lg:p-14">
+        <div>
+          <h2 class="display text-[42px] md:text-[56px]">
+            It is your health. <br/><span class="super-serif" style="font-weight:400;">Take it back.</span>
+          </h2>
+          <p class="mt-5 max-w-md text-white/80 text-[15px] leading-[1.7]">
+            Care close to home, a real medical record, and a team that actually picks up the phone. Leave your email and we will help you find a primary care opening this week.
+          </p>
+          <form onsubmit="event.preventDefault(); this.querySelector('button').innerText='Thanks, we will be in touch';" class="mt-7 flex flex-col sm:flex-row gap-2 max-w-md">
+            <input type="email" required placeholder="Your email" class="field"/>
+            <button type="submit" class="pill pill-light whitespace-nowrap">Get started</button>
+          </form>
+          <p class="mt-3 text-[12px] text-white/60">Or call <a href="tel:6103274200" class="underline underline-offset-2">(610) 327-4200</a>.</p>
+        </div>
+        <div class="relative h-full min-h-[260px]">
+          <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=1200&q=80" alt="A patient relieved after care" class="absolute inset-0 w-full h-full object-cover rounded-[18px]"/>
+          <div class="absolute inset-0 rounded-[18px]" style="background: linear-gradient(120deg, rgba(15,43,102,.35), transparent 60%);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: SMALL CHANGE BIG IMPACT — three image cards with stat badges -->
+<section class="relative bg-mint py-24 lg:py-36">
+  <div class="mx-auto max-w-[1320px] px-5 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <p class="reveal font-serif italic text-navy-700 text-[22px]">What it actually looks like</p>
+      <h2 class="reveal reveal-1 mt-2 display text-[42px] md:text-[60px] text-navy-700">
+        Small change, <span class="super-serif text-navy-500" style="font-weight:400;">big impact.</span>
+      </h2>
+    </div>
+
+    <div class="reveal mt-16 grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div class="relative rounded-[28px] overflow-hidden aspect-[4/5]">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=900&q=80" alt="Better mornings" class="w-full h-full object-cover"/>
+        <div class="absolute inset-0" style="background: linear-gradient(180deg, transparent 30%, rgba(6,22,61,.7) 100%);"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-3 py-1 text-[12px] mb-3 border border-white/20">
+            <span class="pill-dot"></span> Same-week visits
+          </div>
+          <h3 class="font-display font-extrabold text-[26px] tracking-tight">A doctor who knows you</h3>
+          <p class="mt-1 text-white/80 text-[14px]">Most of our family practice offices can fit a new patient in the same week.</p>
+        </div>
+      </div>
+
+      <div class="relative rounded-[28px] overflow-hidden aspect-[4/5]">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80" alt="More active days" class="w-full h-full object-cover"/>
+        <div class="absolute inset-0" style="background: linear-gradient(180deg, transparent 30%, rgba(6,22,61,.7) 100%);"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-3 py-1 text-[12px] mb-3 border border-white/20">
+            <span class="pill-dot"></span> 9 specialty divisions
+          </div>
+          <h3 class="font-display font-extrabold text-[26px] tracking-tight">Specialists in your zip code</h3>
+          <p class="mt-1 text-white/80 text-[14px]">Nine specialty divisions, all within a few miles of Pottstown.</p>
+        </div>
+      </div>
+
+      <div class="relative rounded-[28px] overflow-hidden aspect-[4/5]">
+        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=900&q=80" alt="Calmer evenings" class="w-full h-full object-cover"/>
+        <div class="absolute inset-0" style="background: linear-gradient(180deg, transparent 30%, rgba(6,22,61,.7) 100%);"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-3 py-1 text-[12px] mb-3 border border-white/20">
+            <span class="pill-dot"></span> One record
+          </div>
+          <h3 class="font-display font-extrabold text-[26px] tracking-tight">One chart, less paperwork</h3>
+          <p class="mt-1 text-white/80 text-[14px]">Every visit, lab and prescription in the same record. You stop being the messenger.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PRODUCT — mirrors Nosu "Grounded in nature, backed by science" -->
+<section id="providers" class="relative bg-mint-100 py-24 lg:py-36">
+  <div class="mx-auto max-w-[1320px] px-5 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <p class="reveal font-serif italic text-navy-700 text-[22px]">The practice</p>
+      <h2 class="reveal reveal-1 mt-2 display text-[42px] md:text-[60px] text-navy-700">
+        Local doctors, <span class="super-serif text-navy-500" style="font-weight:400;">current medicine.</span>
+      </h2>
+    </div>
+
+    <div class="reveal mt-14 rounded-[32px] overflow-hidden" style="background: linear-gradient(135deg, #173f7c 0%, #06163d 100%);">
+      <div class="grid lg:grid-cols-2 items-stretch">
+        <div class="relative min-h-[340px]">
+          <img src="https://pmsiforlife.com/wp-content/uploads/2026/02/Wade-Brosius-150x150.jpg" alt="Dr. Wade Brosius" class="absolute inset-0 w-full h-full object-cover"/>
+          <div class="absolute inset-0" style="background: linear-gradient(120deg, transparent 30%, rgba(15,43,102,.4) 100%);"></div>
+        </div>
+        <div class="p-8 lg:p-14 text-white">
+          <p class="font-serif italic text-cream-100/85 text-[18px]">From our Medical Director</p>
+          <h3 class="display-md mt-3 text-[34px] md:text-[44px]">Dr. Wade Brosius, D.O.</h3>
+          <p class="mt-5 text-white/85 text-[15px] leading-[1.75]">
+            "Bringing clinical research into our own backyard has been a real win for our patients. They can take part in a trial in the same office where they already get their primary care, with people they already trust. That matters."
+          </p>
+          <div class="mt-7 flex flex-wrap items-center gap-3">
+            <a href="https://pmsiforlife.com/providers/" class="pill pill-light text-[13px]">Browse all providers</a>
+            <a href="#research" class="pill pill-ghost-light text-[13px]">Research at PMSI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Provider strip -->
+    <div class="reveal mt-12 grid grid-cols-3 md:grid-cols-6 gap-4">
+      <div class="soft-card p-4 flex flex-col items-center text-center">
+        <img src="https://pmsiforlife.com/wp-content/uploads/2026/02/Sabahath-Jaleel-150x150.jpg" alt="" class="w-16 h-16 rounded-full object-cover"/>
+        <h4 class="mt-3 font-display font-extrabold text-[13px] text-navy-700 leading-tight">Sabahath Jaleel, M.D.</h4>
+        <p class="mt-1 text-[11px] text-ink-700/65">Rheumatology</p>
+      </div>
+      <div class="soft-card p-4 flex flex-col items-center text-center">
+        <img src="https://pmsiforlife.com/wp-content/uploads/2025/12/AllanWeber-m5g6j20180523-11016-vp5lab_original-150x150.jpg" alt="" class="w-16 h-16 rounded-full object-cover"/>
+        <h4 class="mt-3 font-display font-extrabold text-[13px] text-navy-700 leading-tight">Allan A. Weber, M.D.</h4>
+        <p class="mt-1 text-[11px] text-ink-700/65">Neurology</p>
+      </div>
+      <div class="soft-card p-4 flex flex-col items-center text-center">
+        <img src="https://pmsiforlife.com/wp-content/uploads/2025/12/pham20180523-18071-ukxhmv_original-150x150.jpg" alt="" class="w-16 h-16 rounded-full object-cover"/>
+        <h4 class="mt-3 font-display font-extrabold text-[13px] text-navy-700 leading-tight">An H. Pham, M.D.</h4>
+        <p class="mt-1 text-[11px] text-ink-700/65">Pulmonary · Sleep</p>
+      </div>
+      <div class="soft-card p-4 flex flex-col items-center text-center">
+        <img src="https://pmsiforlife.com/wp-content/uploads/2026/02/William-Cano-150x150.jpg" alt="" class="w-16 h-16 rounded-full object-cover"/>
+        <h4 class="mt-3 font-display font-extrabold text-[13px] text-navy-700 leading-tight">William G. Cano, M.D.</h4>
+        <p class="mt-1 text-[11px] text-ink-700/65">Interventional Pain</p>
+      </div>
+      <div class="soft-card p-4 flex flex-col items-center text-center">
+        <img src="https://pmsiforlife.com/wp-content/uploads/2026/02/Kimberly-Petruso-150x150.jpg" alt="" class="w-16 h-16 rounded-full object-cover"/>
+        <h4 class="mt-3 font-display font-extrabold text-[13px] text-navy-700 leading-tight">Kimberly Petruso, D.O.</h4>
+        <p class="mt-1 text-[11px] text-ink-700/65">Family Medicine</p>
+      </div>
+      <div class="soft-card p-4 flex flex-col items-center justify-center text-center" style="background:#0f2b66; color:#fff;">
+        <div class="font-display font-extrabold text-[24px] leading-none">36+</div>
+        <p class="mt-1 text-[11px] opacity-80">clinicians</p>
+        <a href="https://pmsiforlife.com/providers/" class="mt-2 text-[11px] underline underline-offset-2 opacity-90">Browse all</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS GRID -->
+<section id="locations" class="relative bg-mint py-24 lg:py-36">
+  <div class="mx-auto max-w-[1320px] px-5 lg:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+      <div class="max-w-2xl">
+        <p class="reveal font-serif italic text-navy-700 text-[22px]">Our communities</p>
+        <h2 class="reveal reveal-1 mt-2 display text-[40px] md:text-[56px] text-navy-700">
+          Twelve offices. <br/><span class="super-serif text-navy-500" style="font-weight:400;">One continuous record.</span>
+        </h2>
+      </div>
+      <p class="reveal reveal-2 max-w-md text-[15px] text-ink-700/75">
+        Walk into any PMSI office and your record is already there. So is your medication list, your last set of labs, and the note your specialist wrote on Tuesday.
+      </p>
+    </div>
+
+    <div class="reveal mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <a href="https://pmsiforlife.com/location/boyertown-medical-associates/" class="soft-card p-7 group block">
+        <p class="font-serif italic text-navy-700 text-[16px]">Boyertown · PA</p>
+        <h3 class="mt-2 font-display font-extrabold text-[20px] text-navy-700 tracking-tight">Boyertown Medical Associates</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">23 N. Walnut Street<br/>Boyertown, PA 19512</p>
+        <p class="mt-4 text-[13px] text-navy-700 font-semibold">(610) 367-2259</p>
+      </a>
+      <a href="https://pmsiforlife.com/location/brookside-family-practice-pediatrics/" class="soft-card p-7 group block">
+        <p class="font-serif italic text-navy-700 text-[16px]">Pottstown · PA</p>
+        <h3 class="mt-2 font-display font-extrabold text-[20px] text-navy-700 tracking-tight">Brookside Family Practice &amp; Pediatrics</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">1555 Medical Drive<br/>Pottstown, PA 19464</p>
+        <p class="mt-4 text-[13px] text-navy-700 font-semibold">(610) 326-7820</p>
+      </a>
+      <a href="https://pmsiforlife.com/location/collegeville-family-practice/" class="soft-card p-7 group block">
+        <p class="font-serif italic text-navy-700 text-[16px]">Collegeville · PA</p>
+        <h3 class="mt-2 font-display font-extrabold text-[20px] text-navy-700 tracking-tight">Collegeville Family Practice</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">555 Second Avenue, Suite 300<br/>Collegeville, PA 19426</p>
+        <p class="mt-4 text-[13px] text-navy-700 font-semibold">(610) 454-7750</p>
+      </a>
+      <a href="https://pmsiforlife.com/location/healthy-living-at-pmsi/" class="soft-card p-7 group block">
+        <p class="font-serif italic text-navy-700 text-[16px]">Pottstown · PA</p>
+        <h3 class="mt-2 font-display font-extrabold text-[20px] text-navy-700 tracking-tight">Healthy Living at PMSI</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">1566 Medical Drive, Suite 201<br/>Pottstown, PA 19464</p>
+        <p class="mt-4 text-[13px] text-navy-700 font-semibold">(484) 224-9655</p>
+      </a>
+      <a href="https://pmsiforlife.com/location/pmsi-division-of-neurology/" class="soft-card p-7 group block">
+        <p class="font-serif italic text-navy-700 text-[16px]">Pottstown · PA</p>
+        <h3 class="mt-2 font-display font-extrabold text-[20px] text-navy-700 tracking-tight">PMSI Division of Neurology</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">1569 Medical Drive, Suite 201<br/>Pottstown, PA 19464</p>
+        <p class="mt-4 text-[13px] text-navy-700 font-semibold">(484) 945-7643</p>
+      </a>
+      <a href="https://pmsiforlife.com/location/pmsi-division-of-pain-medicine/" class="soft-card p-7 group block">
+        <p class="font-serif italic text-navy-700 text-[16px]">Pottstown · PA</p>
+        <h3 class="mt-2 font-display font-extrabold text-[20px] text-navy-700 tracking-tight">PMSI Division of Pain Medicine</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">1610 Medical Drive, Suite 101<br/>Pottstown, PA 19464</p>
+        <p class="mt-4 text-[13px] text-navy-700 font-semibold">(484) 945-0405</p>
+      </a>
+      <a href="https://pmsiforlife.com/location/pmsi-division-of-pulmonary/" class="soft-card p-7 group block">
+        <p class="font-serif italic text-navy-700 text-[16px]">Pottstown · PA</p>
+        <h3 class="mt-2 font-display font-extrabold text-[20px] text-navy-700 tracking-tight">PMSI Division of Pulmonary</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">1601 Medical Drive<br/>Pottstown, PA 19464</p>
+        <p class="mt-4 text-[13px] text-navy-700 font-semibold">(484) 945-0111</p>
+      </a>
+      <a href="https://pmsiforlife.com/location/pmsi-division-of-rheumatology-infusion-center/" class="soft-card p-7 group block">
+        <p class="font-serif italic text-navy-700 text-[16px]">Pottstown · PA</p>
+        <h3 class="mt-2 font-display font-extrabold text-[20px] text-navy-700 tracking-tight">PMSI Rheumatology &amp; Infusion</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">1566 Medical Drive, Suite 104<br/>Pottstown, PA 19464</p>
+        <p class="mt-4 text-[13px] text-navy-700 font-semibold">(484) 945-0075</p>
+      </a>
+      <a href="https://pmsiforlife.com/location/pmsi-sports-medicine/" class="soft-card p-7 group block">
+        <p class="font-serif italic text-navy-700 text-[16px]">Pottstown · PA</p>
+        <h3 class="mt-2 font-display font-extrabold text-[20px] text-navy-700 tracking-tight">PMSI Sports Medicine</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">1555 Medical Drive, 1st Floor<br/>Pottstown, PA 19464</p>
+        <p class="mt-4 text-[13px] text-navy-700 font-semibold">(610) 326-7820</p>
+      </a>
+      <a href="https://pmsiforlife.com/location/sleep-wellness-center/" class="soft-card p-7 group block">
+        <p class="font-serif italic text-navy-700 text-[16px]">Pottstown · PA</p>
+        <h3 class="mt-2 font-display font-extrabold text-[20px] text-navy-700 tracking-tight">Sleep Wellness Center</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">1601 Medical Drive<br/>Pottstown, PA 19464</p>
+        <p class="mt-4 text-[13px] text-navy-700 font-semibold">(484) 945-0111</p>
+      </a>
+      <a href="https://pmsiforlife.com/location/spring-ford-family-practice/" class="soft-card p-7 group block">
+        <p class="font-serif italic text-navy-700 text-[16px]">Royersford · PA</p>
+        <h3 class="mt-2 font-display font-extrabold text-[20px] text-navy-700 tracking-tight">Spring-Ford Family Practice</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">307 S. Lewis Road<br/>Royersford, PA 19468</p>
+        <p class="mt-4 text-[13px] text-navy-700 font-semibold">(610) 792-0300</p>
+      </a>
+      <a href="https://pmsiforlife.com/location/stowe-medical-group/" class="soft-card p-7 group block">
+        <p class="font-serif italic text-navy-700 text-[16px]">Pottstown · PA</p>
+        <h3 class="mt-2 font-display font-extrabold text-[20px] text-navy-700 tracking-tight">Stowe Medical Group</h3>
+        <p class="mt-2 text-[14px] text-ink-700/75">223 Shoemaker Road, Suite 105<br/>Pottstown, PA 19464</p>
+        <p class="mt-4 text-[13px] text-navy-700 font-semibold">(484) 945-0770</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BIG GREEN-STYLE CTA (Balance is within your reach) -->
+<section class="relative">
+  <div class="mx-auto max-w-[1320px] px-5 lg:px-8 py-10">
+    <div class="relative overflow-hidden rounded-[32px] text-white" style="background: linear-gradient(135deg, #6f91c3 0%, #3e62a3 55%, #173f7c 100%); min-height: 380px;">
+      <!-- Decorative silhouette -->
+      <svg class="absolute right-0 bottom-0 w-[420px] h-[420px] hidden lg:block opacity-90" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+        <defs>
+          <radialGradient id="rg" cx="50%" cy="60%" r="60%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.20)"/>
+            <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+          </radialGradient>
+        </defs>
+        <circle cx="240" cy="240" r="180" fill="url(#rg)"/>
+        <path d="M200 70 c -28 0 -50 22 -50 50 c 0 22 14 41 34 47 c -34 7 -60 36 -60 72 v 60 c 0 8 6 14 14 14 h 124 c 8 0 14 -6 14 -14 v -60 c 0 -36 -26 -65 -60 -72 c 20 -6 34 -25 34 -47 c 0 -28 -22 -50 -50 -50 z" fill="rgba(255,255,255,0.30)"/>
+      </svg>
+      <div class="relative p-8 lg:p-16 max-w-2xl">
+        <h2 class="display text-[42px] md:text-[60px]">Better care is closer than <span class="super-serif" style="font-weight:400;">you think.</span></h2>
+        <p class="mt-3 font-serif italic text-cream-100/85 text-[20px]">Today is a good day to start.</p>
+        <div class="mt-7 flex flex-wrap items-center gap-3">
+          <a href="#contact" class="pill pill-light"><span class="pill-dot" style="background:#0f2b66"></span> Find a provider</a>
+          <a href="tel:6103274200" class="pill pill-ghost-light">Call (610) 327-4200</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR PROMISE — three big image cards with accordions (Nosu "no-nonsense") -->
+<section id="research" class="relative bg-mint py-24 lg:py-36">
+  <div class="mx-auto max-w-[1320px] px-5 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-12 items-start">
+      <div class="lg:col-span-4">
+        <p class="reveal font-serif italic text-navy-700 text-[22px]">How we work</p>
+        <h2 class="reveal reveal-1 mt-2 display text-[40px] md:text-[54px] text-navy-700">
+          Three things that <span class="super-serif text-navy-500" style="font-weight:400;">haven't changed since 1978.</span>
+        </h2>
+        <p class="reveal reveal-2 mt-5 text-[15px] text-ink-700/75 max-w-sm">
+          Every PMSI appointment, referral and follow-up call still runs on these.
+        </p>
+      </div>
+
+      <div class="lg:col-span-8 space-y-5">
+        <div class="pcard" style="background:#173f7c;">
+          <img class="pcard-img" src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?auto=format&fit=crop&w=1400&q=80" alt=""/>
+          <div class="pcard-tint"></div>
+          <div class="pcard-tag">
+            <span class="font-serif italic text-cream-100/90 text-[16px]">Grounded in community</span>
+            <span class="w-9 h-9 rounded-full bg-white/15 border border-white/25 flex items-center justify-center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+          </div>
+          <div class="relative w-full">
+            <h3 class="pcard-title">Physician-owned, locally governed</h3>
+            <p class="mt-2 text-white/85 text-[14px] max-w-xl">Independent for nearly fifty years. No outside management, no quarterly investor calls. Just doctors accountable to their neighbors.</p>
+          </div>
+        </div>
+
+        <div class="pcard" style="background:#3e62a3;">
+          <img class="pcard-img" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=80" alt=""/>
+          <div class="pcard-tint"></div>
+          <div class="pcard-tag">
+            <span class="font-serif italic text-cream-100/90 text-[16px]">Uncompromising standards</span>
+            <span class="w-9 h-9 rounded-full bg-white/15 border border-white/25 flex items-center justify-center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+          </div>
+          <div class="relative w-full">
+            <h3 class="pcard-title">Coordinated, continuous care</h3>
+            <p class="mt-2 text-white/85 text-[14px] max-w-xl">One medical record across every PMSI office and division. Your primary doctor, your specialists and your pharmacy reading the same chart, for once.</p>
+          </div>
+        </div>
+
+        <div class="pcard" style="background:#6f91c3;">
+          <img class="pcard-img" src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?auto=format&fit=crop&w=1400&q=80" alt=""/>
+          <div class="pcard-tint"></div>
+          <div class="pcard-tag">
+            <span class="font-serif italic text-cream-100/90 text-[16px]">Backed by modern science</span>
+            <span class="w-9 h-9 rounded-full bg-white/15 border border-white/25 flex items-center justify-center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+          </div>
+          <div class="relative w-full">
+            <h3 class="pcard-title">Research at the local level</h3>
+            <p class="mt-2 text-white/85 text-[14px] max-w-xl">Through our partnership with Circuit Clinical, PMSI patients can join clinical trials without ever leaving the practice they already know.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT (single column form in mint card) -->
+<section id="contact" class="relative bg-mint-100 py-24 lg:py-32">
+  <div class="mx-auto max-w-[920px] px-5 lg:px-8 text-center">
+    <p class="reveal font-serif italic text-navy-700 text-[22px]">Talk with us</p>
+    <h2 class="reveal reveal-1 mt-2 display text-[42px] md:text-[56px] text-navy-700">
+      Questions, feedback, <br/><span class="super-serif text-navy-500" style="font-weight:400;">or a story to share?</span>
+    </h2>
+    <p class="reveal reveal-2 mt-5 text-[15px] text-ink-700/75 max-w-xl mx-auto">
+      For refills and referrals, call your physician directly or use the FollowMyHealth portal. For anything else, drop us a note here. A real person reads every one.
+    </p>
+
+    <form onsubmit="event.preventDefault(); this.querySelector('button[type=submit]').innerText='Got it, thank you'; this.querySelector('button[type=submit]').classList.add('pointer-events-none');" class="reveal mt-10 soft-card p-6 lg:p-10 text-left">
+      <div class="grid sm:grid-cols-2 gap-4">
+        <label class="block">
+          <span class="text-[12px] uppercase tracking-[.14em] text-navy-700 font-semibold">First name</span>
+          <input required type="text" class="mt-1 w-full px-4 py-3 rounded-full border border-navy-700/15 bg-white text-ink-900 focus:outline-none focus:border-navy-700"/>
+        </label>
+        <label class="block">
+          <span class="text-[12px] uppercase tracking-[.14em] text-navy-700 font-semibold">Last name</span>
+          <input required type="text" class="mt-1 w-full px-4 py-3 rounded-full border border-navy-700/15 bg-white text-ink-900 focus:outline-none focus:border-navy-700"/>
+        </label>
+        <label class="block">
+          <span class="text-[12px] uppercase tracking-[.14em] text-navy-700 font-semibold">Email</span>
+          <input required type="email" class="mt-1 w-full px-4 py-3 rounded-full border border-navy-700/15 bg-white text-ink-900 focus:outline-none focus:border-navy-700"/>
+        </label>
+        <label class="block">
+          <span class="text-[12px] uppercase tracking-[.14em] text-navy-700 font-semibold">Phone</span>
+          <input type="tel" class="mt-1 w-full px-4 py-3 rounded-full border border-navy-700/15 bg-white text-ink-900 focus:outline-none focus:border-navy-700"/>
+        </label>
+        <label class="block sm:col-span-2">
+          <span class="text-[12px] uppercase tracking-[.14em] text-navy-700 font-semibold">Choose a location</span>
+          <select class="mt-1 w-full px-4 py-3 rounded-full border border-navy-700/15 bg-white text-ink-900 focus:outline-none focus:border-navy-700">
+            <option>Select a location</option>
+            <option>Boyertown Medical Associates</option>
+            <option>Brookside Family Practice &amp; Pediatrics</option>
+            <option>Collegeville Family Practice</option>
+            <option>Healthy Living at PMSI</option>
+            <option>PMSI Division of Neurology</option>
+            <option>PMSI Division of Pain Medicine</option>
+            <option>PMSI Division of Pulmonary</option>
+            <option>PMSI Rheumatology &amp; Infusion</option>
+            <option>PMSI Sports Medicine</option>
+            <option>Sleep Wellness Center</option>
+            <option>Spring-Ford Family Practice</option>
+            <option>Stowe Medical Group</option>
+            <option>Corporate Office</option>
+          </select>
+        </label>
+        <label class="block sm:col-span-2">
+          <span class="text-[12px] uppercase tracking-[.14em] text-navy-700 font-semibold">Message</span>
+          <textarea rows="4" class="mt-1 w-full px-4 py-3 rounded-2xl border border-navy-700/15 bg-white text-ink-900 focus:outline-none focus:border-navy-700"></textarea>
+        </label>
+      </div>
+      <p class="mt-5 text-[12px] text-ink-700/60 leading-[1.6]">
+        Please do not use this form for medical questions or symptoms. Call your physician's office for anything time-sensitive.
+      </p>
+      <div class="mt-5 flex justify-end">
+        <button type="submit" class="pill pill-primary"><span class="pill-dot"></span> Send message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER (rounded shell, Nosu-style) -->
+<footer class="px-3 lg:px-5 pb-5 bg-mint-100">
+  <div class="mx-auto max-w-[1320px]">
+    <div class="footer-shell p-8 lg:p-14">
+      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10">
+        <div class="flex items-center gap-4">
+          <span class="inline-flex items-center justify-center bg-white rounded-2xl px-6 py-4">
+            <img src="assets/pmsi-logo.png" alt="Pottstown Medical Specialists" class="h-20 w-auto"/>
+          </span>
+        </div>
+        <div class="flex gap-3">
+          <a href="#" class="w-10 h-10 rounded-full bg-white/15 border border-white/25 flex items-center justify-center hover:bg-white/25" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8.27h4.56V23H.22V8.27zm7.59 0h4.37v2.01h.06c.61-1.15 2.11-2.36 4.34-2.36 4.64 0 5.49 3.06 5.49 7.04V23h-4.55v-6.55c0-1.56-.03-3.57-2.18-3.57-2.18 0-2.51 1.7-2.51 3.45V23H7.81V8.27z"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-white/15 border border-white/25 flex items-center justify-center hover:bg-white/25" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.02H7.9v-2.9h2.54v-2.2c0-2.51 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-white/15 border border-white/25 flex items-center justify-center hover:bg-white/25" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-10 h-px bg-white/20"></div>
+
+      <div class="mt-10 grid md:grid-cols-12 gap-10">
+        <div class="md:col-span-3">
+          <div class="font-display font-extrabold text-[17px] mb-4">Practice</div>
+          <ul class="space-y-2 text-[14px] opacity-90">
+            <li><a href="#about" class="hover:underline">About</a></li>
+            <li><a href="#specialties" class="hover:underline">Specialties</a></li>
+            <li><a href="#locations" class="hover:underline">Locations</a></li>
+            <li><a href="#providers" class="hover:underline">Providers</a></li>
+            <li><a href="#research" class="hover:underline">Research</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3">
+          <div class="font-display font-extrabold text-[17px] mb-4">Patients</div>
+          <ul class="space-y-2 text-[14px] opacity-90">
+            <li><a href="https://pmsiforlife.com/patient-forms" class="hover:underline">Patient forms</a></li>
+            <li><a href="https://pmsiforlife.com/patient-education" class="hover:underline">Education</a></li>
+            <li><a href="https://pmsiforlife.com/patient-survey" class="hover:underline">Patient survey</a></li>
+            <li><a href="https://pmsiforlife.followmyhealth.com/" class="hover:underline">FollowMyHealth portal</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-6">
+          <div class="font-display font-extrabold text-[18px] mb-4">Hear from PMSI now and then. Community health events, education classes, and when new-patient slots open up.</div>
+          <form onsubmit="event.preventDefault(); this.querySelector('button').innerText='Subscribed, thanks';" class="flex flex-col sm:flex-row gap-2">
+            <input type="email" required placeholder="Your email" class="field"/>
+            <button type="submit" class="pill pill-light whitespace-nowrap">Subscribe</button>
+          </form>
+          <p class="mt-3 text-[12px] opacity-75">PMSI Administrative Office &middot; 351 W Schuylkill Road, Coventry Square Suite 13, Pottstown, PA 19465 &middot; (610) 327-4200</p>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-[12px] opacity-75">
+        <p>© <span id="yr"></span> Pottstown Medical Specialists, Inc. All rights reserved.</p>
+        <p>Comprehensive Healthcare For Life</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isFinePointer = matchMedia('(pointer: fine)').matches;
+
+  // === Reveal on scroll (multi-variant) ===
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.10, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal, .reveal-l, .reveal-r, .reveal-up').forEach(el => io.observe(el));
+
+  // === Year ===
+  const yr = document.getElementById('yr'); if (yr) yr.textContent = new Date().getFullYear();
+
+  // === Mobile nav ===
+  const navToggle = document.getElementById('navToggle');
+  const mobileNav = document.getElementById('mobileNav');
+  navToggle?.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  mobileNav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+
+  // === Scroll progress bar ===
+  const bar = document.getElementById('scrollBar');
+  const onScroll = () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    if (bar) bar.style.width = pct + '%';
+  };
+  document.addEventListener('scroll', onScroll, { passive: true });
+
+  // === Hero spotlight follows mouse ===
+  const hero = document.querySelector('.hero-wrap');
+  const spot = document.getElementById('heroSpot');
+  if (hero && spot && !prefersReduced) {
+    hero.addEventListener('mousemove', (e) => {
+      const r = hero.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width) * 100;
+      const y = ((e.clientY - r.top) / r.height) * 100;
+      spot.style.setProperty('--mx', x + '%');
+      spot.style.setProperty('--my', y + '%');
+    });
+  }
+
+  // === Parallax on hero video ===
+  const heroVid = document.querySelector('.hero-vid');
+  if (heroVid && !prefersReduced) {
+    document.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (y < window.innerHeight * 1.2) {
+        heroVid.style.transform = `translate3d(0, ${y * 0.18}px, 0) scale(${1 + y * 0.0002})`;
+      }
+    }, { passive: true });
+  }
+
+  // === Custom cursor (desktop only, fine pointer) ===
+  if (isFinePointer && !prefersReduced) {
+    document.body.classList.add('has-cursor');
+    const cur = document.getElementById('cursor');
+    const trail = document.getElementById('cursorTrail');
+    let mx = 0, my = 0, tx = 0, ty = 0;
+    document.addEventListener('mousemove', (e) => { mx = e.clientX; my = e.clientY; });
+    const tick = () => {
+      tx += (mx - tx) * 0.18;
+      ty += (my - ty) * 0.18;
+      if (cur) cur.style.transform = `translate(${mx}px, ${my}px) translate(-50%,-50%)`;
+      if (trail) trail.style.transform = `translate(${tx}px, ${ty}px) translate(-50%,-50%)`;
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+    // Hover targets
+    const hoverable = 'a, button, [role=button], summary, input, select, textarea, .pill, .soft-card, .pcard, .vline, .trust-pill';
+    document.querySelectorAll(hoverable).forEach(el => {
+      el.addEventListener('mouseenter', () => cur?.classList.add('is-hover'));
+      el.addEventListener('mouseleave', () => cur?.classList.remove('is-hover'));
+    });
+    // Hide when cursor leaves window
+    document.addEventListener('mouseleave', () => { if (cur) cur.style.opacity = 0; if (trail) trail.style.opacity = 0; });
+    document.addEventListener('mouseenter', () => { if (cur) cur.style.opacity = 1; if (trail) trail.style.opacity = 1; });
+  }
+
+  // === Magnetic effect on pill buttons ===
+  if (!prefersReduced && isFinePointer) {
+    document.querySelectorAll('.pill').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2;
+        const y = e.clientY - r.top - r.height / 2;
+        btn.style.transform = `translate(${x * 0.18}px, ${y * 0.25}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+    });
+  }
+
+  // === Card tilt on hover (soft-card, pcard) ===
+  if (!prefersReduced && isFinePointer) {
+    document.querySelectorAll('.soft-card, .pcard, .stat-card').forEach(card => {
+      card.classList.add('tilt');
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width;
+        const y = (e.clientY - r.top) / r.height;
+        const ry = (x - 0.5) * 8;
+        const rx = (0.5 - y) * 8;
+        card.style.setProperty('--rx', rx + 'deg');
+        card.style.setProperty('--ry', ry + 'deg');
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--rx', '0deg');
+        card.style.setProperty('--ry', '0deg');
+      });
+    });
+  }
+
+  // === Counter animation when stats enter view ===
+  const counters = document.querySelectorAll('.counter');
+  const counterIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      counterIO.unobserve(el);
+      const target = parseInt(el.dataset.target || el.textContent, 10) || 0;
+      const dur = 1600;
+      const t0 = performance.now();
+      const tick = (t) => {
+        const p = Math.min(1, (t - t0) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased);
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.4 });
+  counters.forEach(c => counterIO.observe(c));
+
+  // === Smooth-scroll anchor offsets handled by CSS scroll-behavior ===
+
+  // === Accordion: close others when one opens ===
+  document.querySelectorAll('details.acc').forEach(d => {
+    d.addEventListener('toggle', () => {
+      if (d.open) {
+        d.parentElement?.querySelectorAll('details.acc[open]').forEach(o => { if (o !== d) o.open = false; });
+      }
+    });
+  });
+
+  // === Force favicon refresh ===
+  const link = document.querySelector('link[rel="icon"]');
+  if (link) { const href = link.href; link.href = ''; link.href = href; }
+})();
+</script>
+</body>
+</html>
